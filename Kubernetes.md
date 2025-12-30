@@ -219,6 +219,46 @@ spec:
 
 Tested it, and I get a 404, that's probably good considering I haven't set anything up yet!
 
+## configure ssl certificate
+i am going to be using letsencrypt for an ssl for my domain *.internal.nictitate.net, and i host this on cloudflare so easy as pie!
+
+I logged onto cloudflare and got myself an api token to the domain i want to update, and i can store this in a kubernetes secret, which is cool
+
+```
+microk8s kubectl create secret generic cloudflare-api-token-secret --from-literal=api-token=[my-api-token] --namespace cert-manager
+```
+
+and then configure letsencrypt to talk to cloudflare. create a yaml (util-cloudflare.yaml) and apply it
+
+```
+apiVersion: cert-manager.io/v1
+kind: ClusterIssuer
+metadata:
+  name: letsencrypt-prod
+spec:
+  acme:
+    server: https://acme-v02.api.letsencrypt.org/directory
+    email: damian@damian.id.au # Use your real email for expiry alerts
+    privateKeySecretRef:
+      name: letsencrypt-prod-key
+    solvers:
+    - dns01:
+        cloudflare:
+          email: damian@damian.id.au
+          apiTokenSecretRef:
+            name: cloudflare-api-token-secret
+            key: api-token
+```
+..
+```
+microk8s kubectl apply -f util-cloudflare.yaml
+```
+
+```
+microk8s enable cert-manager
+```
+
+
 ## shared storage across all nodes
 now i need to set up shared storage across all of the nodes, this will be where all of the apps core data lives, the databses the configurations, etc. this will replicate across all of the nodes in case a node goes down, another node can start working straight away.
 
