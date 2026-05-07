@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terminal Blog - Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600&display=swap');
+        body { font-family: 'Fira Code', monospace; }
+        .cursor { display: inline-block; width: 8px; height: 1.2em; background-color: #4ade80; animation: blink 1s infinite; vertical-align: middle; }
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+    </style>
+</head>
+<body class="bg-black text-green-400 p-4 md:p-12 min-h-screen">
+    <div class="max-w-4xl mx-auto border border-green-900 p-6 md:p-10 shadow-2xl">
+        <nav class="mb-12 border-b border-green-900 pb-6 flex flex-wrap gap-6 text-sm">
+            <a href="index.html" class="hover:bg-green-900 hover:text-black px-2 py-1">[ HOME ]</a>
+            <a href="index.html" class="hover:bg-green-900 hover:text-black px-2 py-1">[ POSTS ]</a>
+            <a href="about.html" class="hover:bg-green-900 hover:text-black px-2 py-1">[ ABOUT ]</a>
+            <div class="ml-auto opacity-50">v1.0.4-stable</div>
+        </nav>
+
+        <header class="mb-16">
+            <h1 class="text-2xl md:text-3xl font-bold mb-4">
+                $ whoami<br>
+                <span class="text-white">user@blog:~# cat welcome.txt</span>
+            </h1>
+            <p class="text-green-500 opacity-80 leading-relaxed">
+                Welcome to my digital workspace. Here you will find raw technical documentation, research notes, and system logs.
+                <span class="cursor"></span>
+            </p>
+        </header>
+
+        <section class="space-y-12">
+            <div class="group">
+                <div class="flex items-center gap-2 text-xs text-green-800 mb-2">
+                    <i data-lucide="calendar" class="w-3 h-3"></i> 2023-10-24 14:00:00
+                </div>
+                <a href="post.html" class="block group-hover:translate-x-2 transition-transform">
+                    <h2 class="text-xl font-bold text-white mb-2">/usr/bin/rust_scalability_guide.sh</h2>
+                    <p class="text-green-600">A deep dive into high-concurrency systems using Rust's memory model...</p>
+                </a>
+            </div>
+
+            <div class="group">
+                <div class="flex items-center gap-2 text-xs text-green-800 mb-2">
+                    <i data-lucide="calendar" class="w-3 h-3"></i> 2023-10-12 09:30:00
+                </div>
+                <a href="post.html" class="block group-hover:translate-x-2 transition-transform">
+                    <h2 class="text-xl font-bold text-white mb-2">/var/log/minimal_ui_analysis.log</h2>
+                    <p class="text-green-600">Observation of user interaction with reduced interface complexity...</p>
+                </a>
+            </div>
+
+            <div class="group">
+                <div class="flex items-center gap-2 text-xs text-green-800 mb-2">
+                    <i data-lucide="calendar" class="w-3 h-3"></i> 2023-09-28 23:59:59
+                </div>
+                <a href="post.html" class="block group-hover:translate-x-2 transition-transform">
+                    <h2 class="text-xl font-bold text-white mb-2">/home/user/notes/prod_debugging.md</h2>
+                    <p class="text-green-600">Post-mortem methodology for critical infrastructure failure...</p>
+                </a>
+            </div>
+        </section>
+
+        <footer class="mt-24 pt-8 border-t border-green-900 text-xs flex justify-between items-center opacity-60">
+            <p>(C) 1994-2023 LOG-MANAGER</p>
+            <div class="flex gap-4">
+                <a href="#" class="hover:text-white">SSH</a>
+                <a href="#" class="hover:text-white">GIT</a>
+                <a href="#" class="hover:text-white">RSS</a>
+            </div>
+        </footer>
+    </div>
+    <script>lucide.createIcons();</script>
+</body>
+</html>

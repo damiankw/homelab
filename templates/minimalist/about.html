@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Minimalist Blog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-white text-zinc-900 leading-relaxed">
+    <nav class="max-w-3xl mx-auto px-6 py-12 flex justify-between items-center">
+        <a href="index.html" class="text-xl font-semibold tracking-tight">John Doe</a>
+        <div class="space-x-6 text-sm font-medium text-zinc-500">
+            <a href="index.html" class="hover:text-zinc-900 transition-colors">Writing</a>
+            <a href="about.html" class="text-zinc-900 border-b border-zinc-900">About</a>
+        </div>
+    </nav>
+
+    <main class="max-w-3xl mx-auto px-6 pb-24">
+        <header class="mb-12">
+            <h1 class="text-4xl font-bold tracking-tight mb-6">About Me</h1>
+        </header>
+
+        <section class="space-y-8 text-zinc-600">
+            <p class="text-lg">I'm a software engineer based in San Francisco, specializing in backend systems and distributed infrastructure. I enjoy breaking down complex problems into simple, maintainable code.</p>
+
+            <p>I started this blog as a way to document my learning journey and share insights with the community. You'll mostly find posts about Rust, Go, Kubernetes, and systems architecture.</p>
+
+            <div>
+                <h3 class="text-xl font-semibold text-zinc-900 mb-4">Currently</h3>
+                <ul class="space-y-2">
+                    <li class="flex items-center gap-2"><i data-lucide="briefcase" class="w-4 h-4"></i> Building at Acme Corp</li>
+                    <li class="flex items-center gap-2"><i data-lucide="book-open" class="w-4 h-4"></i> Learning eBPF and kernel internals</li>
+                    <li class="flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4"></i> San Francisco, CA</li>
+                </ul>
+            </div>
+
+            <div class="pt-8">
+                <a href="mailto:john@example.com" class="inline-flex items-center gap-2 bg-zinc-900 text-white px-6 py-3 font-medium hover:bg-zinc-800 transition-colors">
+                    Get in touch <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+        </section>
+
+        <footer class="mt-24 pt-12 border-t border-zinc-100 flex justify-between items-center text-zinc-400 text-sm">
+            <p>&copy; 2023 John Doe</p>
+            <div class="flex space-x-4">
+                <a href="#" class="hover:text-zinc-900"><i data-lucide="github" class="w-4 h-4"></i></a>
+                <a href="#" class="hover:text-zinc-900"><i data-lucide="twitter" class="w-4 h-4"></i></a>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

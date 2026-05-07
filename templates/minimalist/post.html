@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building Scalable Systems with Rust - Minimalist Blog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-white text-zinc-900 leading-relaxed">
+    <nav class="max-w-3xl mx-auto px-6 py-12 flex justify-between items-center">
+        <a href="index.html" class="text-xl font-semibold tracking-tight">John Doe</a>
+        <div class="space-x-6 text-sm font-medium text-zinc-500">
+            <a href="index.html" class="hover:text-zinc-900 transition-colors">Writing</a>
+            <a href="about.html" class="hover:text-zinc-900 transition-colors text-zinc-900 border-b border-zinc-900">About</a>
+        </div>
+    </nav>
+
+    <main class="max-w-3xl mx-auto px-6 pb-24">
+        <header class="mb-12">
+            <div class="text-xs font-semibold text-zinc-400 uppercase tracking-widest mb-4">October 24, 2023 &bull; 8 min read</div>
+            <h1 class="text-4xl font-bold tracking-tight mb-6">Building Scalable Systems with Rust</h1>
+        </header>
+
+        <article class="prose prose-zinc lg:prose-lg max-w-none">
+            <p class="text-xl text-zinc-600 mb-8 leading-relaxed">Rust has emerged as a powerhouse for building systems where performance and safety are paramount. In this post, we'll explore why.</p>
+
+            <h2 class="text-2xl font-bold mt-12 mb-4">Memory Safety Without a Garbage Collector</h2>
+            <p class="mb-6">One of Rust's most compelling features is its ownership model. Unlike languages with garbage collection, Rust manages memory at compile-time through a set of rules that the compiler checks. If any of these rules are violated, the program won't compile.</p>
+
+            <div class="bg-zinc-50 p-6 rounded-none border-l-4 border-zinc-900 my-8">
+                <code class="text-sm font-mono text-zinc-800">
+                    fn main() {<br>
+                    &nbsp;&nbsp;let v = vec![1, 2, 3];<br>
+                    &nbsp;&nbsp;let v2 = v;<br>
+                    &nbsp;&nbsp;// println!("{:?}", v); // This would cause a compile error<br>
+                    }
+                </code>
+            </div>
+
+            <h2 class="text-2xl font-bold mt-12 mb-4">Fearless Concurrency</h2>
+            <p class="mb-6">Concurrency is notoriously difficult to get right in C++. Data races are a common source of bugs that are hard to track down. Rust's type system and ownership model prevent data races at compile-time, allowing you to write concurrent code with confidence.</p>
+
+            <p class="mb-6">Whether you are building a high-frequency trading platform or a new operating system, Rust provides the tools to do so safely and efficiently.</p>
+        </article>
+
+        <footer class="mt-24 pt-12 border-t border-zinc-100 flex justify-between items-center text-zinc-400 text-sm">
+            <p>&copy; 2023 John Doe</p>
+            <div class="flex space-x-4">
+                <a href="#" class="hover:text-zinc-900"><i data-lucide="github" class="w-4 h-4"></i></a>
+                <a href="#" class="hover:text-zinc-900"><i data-lucide="twitter" class="w-4 h-4"></i></a>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

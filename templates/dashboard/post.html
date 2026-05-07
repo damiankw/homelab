@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post - Dashboard Blog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+    </style>
+</head>
+<body class="bg-zinc-50 text-zinc-900 flex h-screen overflow-hidden">
+    <!-- Sidebar -->
+    <aside class="w-72 bg-white border-r border-zinc-200 flex flex-col shrink-0">
+        <div class="p-8 border-b border-zinc-100">
+            <a href="index.html" class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center text-white font-bold">JD</div>
+                <h1 class="font-bold text-sm tracking-tight leading-none">John Doe</h1>
+            </a>
+        </div>
+        <nav class="p-6 flex-grow overflow-y-auto space-y-1">
+            <a href="index.html" class="flex items-center gap-3 px-3 py-2 text-zinc-500 hover:bg-zinc-50 hover:text-zinc-900 rounded-lg font-semibold text-sm transition-all">
+                <i data-lucide="layout-grid" class="w-4 h-4"></i> Dashboard
+            </a>
+            <div class="px-3 py-2 bg-indigo-50 text-indigo-600 rounded-lg font-semibold text-sm flex items-center gap-3">
+                <i data-lucide="file-text" class="w-4 h-4"></i> Current Post
+            </div>
+        </nav>
+    </aside>
+
+    <main class="flex-grow overflow-y-auto bg-white">
+        <div class="max-w-4xl mx-auto p-12">
+            <nav class="flex items-center gap-2 text-sm font-bold text-zinc-400 mb-8">
+                <a href="index.html" class="hover:text-zinc-900 transition-colors">DASHBOARD</a>
+                <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                <span class="text-zinc-900">SYSTEMS</span>
+            </nav>
+
+            <article>
+                <header class="mb-12">
+                    <h1 class="text-5xl font-extrabold tracking-tight mb-6">Building Scalable Systems with Rust</h1>
+                    <div class="flex items-center gap-6">
+                        <div class="flex items-center gap-2">
+                            <div class="w-8 h-8 bg-zinc-900 rounded-full"></div>
+                            <span class="font-bold text-sm">John Doe</span>
+                        </div>
+                        <span class="text-zinc-300">|</span>
+                        <span class="text-zinc-500 text-sm font-medium">October 24, 2023</span>
+                        <span class="text-zinc-300">|</span>
+                        <span class="text-indigo-600 text-sm font-bold uppercase tracking-widest">8 Min Read</span>
+                    </div>
+                </header>
+
+                <div class="prose prose-zinc max-w-none prose-headings:font-extrabold prose-headings:tracking-tight prose-p:text-zinc-600 prose-p:leading-relaxed">
+                    <p class="text-xl text-zinc-900 leading-relaxed font-medium mb-8">Rust's ownership model is not just a feature; it's a paradigm shift in how we think about computer memory and program safety.</p>
+
+                    <h2 class="text-2xl font-bold mt-12 mb-4">Zero-Cost Abstractions</h2>
+                    <p>What does it mean for an abstraction to be "zero-cost"? In C++ terms, it means you don't pay for what you don't use. In Rust, it goes a step further: you couldn't have written a manual implementation that was any faster than the provided abstraction.</p>
+
+                    <div class="bg-zinc-900 rounded-2xl p-8 my-8 mono text-zinc-300 text-sm overflow-x-auto shadow-xl">
+                        <pre><code><span class="text-indigo-400">fn</span> <span class="text-blue-400">process_data</span>(input: &<span class="text-yellow-400">str</span>) -> <span class="text-yellow-400">Result</span>&lt;<span class="text-yellow-400">Value</span>, <span class="text-yellow-400">Error</span>&gt; {
+    <span class="text-zinc-500">// Ownership and borrowing ensures safety here</span>
+    <span class="text-indigo-400">let</span> processed = input.trim().to_lowercase();
+    <span class="text-yellow-400">Ok</span>(processed)
+}</code></pre>
+                    </div>
+
+                    <h2 class="text-2xl font-bold mt-12 mb-4">The Concurrency Myth</h2>
+                    <p>Many believe that concurrent programming is inherently dangerous. Rust proves that with the right type system, the compiler can prevent data races entirely, making concurrency as safe as sequential code.</p>
+                </div>
+            </article>
+
+            <footer class="mt-24 pt-12 border-t border-zinc-100 flex justify-between items-center">
+                <div class="flex gap-4">
+                    <button class="bg-indigo-600 text-white px-6 py-3 rounded-xl font-bold hover:bg-indigo-700 transition-all shadow-lg shadow-indigo-100">Next Article</button>
+                    <button class="bg-white border border-zinc-200 px-6 py-3 rounded-xl font-bold hover:border-zinc-900 transition-all">Share Report</button>
+                </div>
+                <div class="flex gap-4 text-zinc-400">
+                    <a href="#"><i data-lucide="bookmark" class="w-5 h-5"></i></a>
+                    <a href="#"><i data-lucide="flag" class="w-5 h-5"></i></a>
+                </div>
+            </footer>
+        </div>
+    </main>
+
+    <script>lucide.createIcons();</script>
+</body>
+</html>
