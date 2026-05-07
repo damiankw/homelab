@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Swiss Blog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-white text-black p-4 md:p-8">
+    <div class="max-w-7xl mx-auto border border-black flex flex-col md:flex-row">
+        <!-- Sidebar -->
+        <div class="w-full md:w-1/3 border-r border-black p-12 flex flex-col justify-between min-h-[80vh]">
+            <div>
+                <a href="index.html" class="text-4xl font-black tracking-tighter uppercase mb-24 block leading-none">John<br>Doe</a>
+                <nav class="flex flex-col gap-4 font-black uppercase text-sm border-t border-black pt-12">
+                    <a href="index.html" class="hover:text-red-600 transition-colors">Frontpage</a>
+                    <a href="about.html" class="text-red-600">Profile</a>
+                    <a href="#" class="hover:text-red-600 transition-colors">Github</a>
+                    <a href="#" class="hover:text-red-600 transition-colors">X-Twitter</a>
+                </nav>
+            </div>
+            <div class="bg-red-600 w-full aspect-square"></div>
+        </div>
+
+        <!-- Main -->
+        <div class="w-full md:w-2/3 p-12 md:p-24 bg-zinc-50">
+            <h1 class="text-6xl md:text-9xl font-black tracking-tighter uppercase leading-none mb-16">Profile</h1>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-20">
+                <div class="space-y-12">
+                    <section>
+                        <h2 class="text-xs font-black uppercase tracking-widest text-zinc-400 mb-6">Introduction</h2>
+                        <p class="text-2xl font-bold tracking-tight uppercase leading-tight">John Doe is a principal engineer based in San Francisco. He develops high-performance distributed systems with a focus on reliability and security.</p>
+                    </section>
+
+                    <section>
+                        <h2 class="text-xs font-black uppercase tracking-widest text-zinc-400 mb-6">Expertise</h2>
+                        <ul class="text-sm font-black uppercase tracking-widest space-y-4">
+                            <li>01 / Distributed Consensus</li>
+                            <li>02 / Rust Programming</li>
+                            <li>03 / Infrastructure as Code</li>
+                            <li>04 / Systems Observability</li>
+                        </ul>
+                    </section>
+                </div>
+
+                <div class="space-y-12">
+                    <section>
+                        <h2 class="text-xs font-black uppercase tracking-widest text-zinc-400 mb-6">Biography</h2>
+                        <p class="text-sm font-bold uppercase leading-relaxed text-zinc-600">With over 15 years in software architecture, John has led engineering teams at top-tier technology firms. His work combines rigorous academic research with practical, production-ready implementation.</p>
+                    </section>
+
+                    <section>
+                        <div class="bg-black text-white p-8">
+                            <h2 class="text-xs font-black uppercase tracking-widest text-red-600 mb-4">Contact</h2>
+                            <p class="text-lg font-black tracking-tight uppercase mb-8">Ready for technical deep dives and architectural consulting.</p>
+                            <a href="mailto:john@example.com" class="border-b-4 border-white pb-1 font-black uppercase text-xs hover:text-red-600 transition-colors">Send Transmission</a>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>lucide.createIcons();</script>
+</body>
+</html>

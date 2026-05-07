@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post - Focus Blog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Charter:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .serif { font-family: 'Charter', 'Georgia', serif; }
+        .focus-link:hover { opacity: 0.6; }
+    </style>
+</head>
+<body class="bg-[#fafafa] text-[#1a1a1a] selection:bg-black selection:text-white">
+    <nav class="max-w-2xl mx-auto px-6 py-20 flex justify-between items-center">
+        <a href="index.html" class="font-bold tracking-tight text-lg focus-link">JD</a>
+        <a href="index.html" class="text-sm font-medium focus-link">Index</a>
+    </nav>
+
+    <main class="max-w-2xl mx-auto px-6 pb-40">
+        <article>
+            <header class="mb-20">
+                <time class="text-xs font-medium text-[#999] block mb-4 uppercase tracking-widest">24 October 2023 &bull; 12 Min Read</time>
+                <h1 class="serif text-5xl md:text-6xl font-bold leading-tight mb-8">Building Scalable Systems with Rust</h1>
+            </header>
+
+            <div class="serif text-xl leading-relaxed space-y-12 text-[#333]">
+                <p class="text-2xl text-[#1a1a1a] font-bold italic leading-snug">The goal of any systems programming language is to provide control over hardware without sacrificing the developer's sanity.</p>
+
+                <p>Rust achieves this through a unique mechanism known as the borrow checker. By enforcing ownership rules at compile-time, it guarantees memory safety and data-race-free concurrency. This isn't just about avoiding crashes; it's about building a solid foundation for complex, distributed software.</p>
+
+                <h2 class="text-3xl font-bold text-[#1a1a1a] pt-8">Performance and Predictability</h2>
+                <p>In high-scale systems, average latency is often a vanity metric. What truly matters is tail latency — the 99th and 99.9th percentiles. Languages with garbage collection inevitably suffer from unpredictable pauses that spike these tail latencies. Rust's deterministic resource management ensures that performance remains consistent even under heavy load.</p>
+
+                <div class="bg-white border border-[#eee] p-8 font-sans text-sm leading-relaxed my-12">
+                    <p class="font-bold mb-4 uppercase tracking-widest text-[#999]">Example</p>
+                    <pre class="overflow-x-auto"><code>fn main() {
+    let message = String::from("Focus on safety.");
+    let ref_msg = &message;
+    println!("{}", ref_msg);
+}</code></pre>
+                </div>
+
+                <p>By shifting the burden of memory safety to the compiler, we can build faster, more reliable systems that scale to the needs of the modern web.</p>
+            </div>
+        </article>
+
+        <footer class="mt-40 pt-20 border-t border-[#eee] text-center">
+            <a href="index.html" class="serif text-xl font-bold italic hover:underline underline-offset-4 decoration-1">Return to the index</a>
+        </footer>
+    </main>
+</body>
+</html>

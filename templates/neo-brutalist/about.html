@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Neo-Brutalist Blog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;700;900&display=swap');
+        body { font-family: 'Archivo', sans-serif; }
+        h1, h2, h3 { font-family: 'Archivo Black', sans-serif; text-transform: uppercase; }
+        .neo-shadow { box-shadow: 8px 8px 0px 0px #000; }
+        .neo-border { border: 4px solid #000; }
+    </style>
+</head>
+<body class="bg-[#4ECDC4] text-black p-6 md:p-12">
+    <div class="max-w-4xl mx-auto">
+        <nav class="mb-16">
+            <a href="index.html" class="bg-white neo-border px-6 py-3 font-bold inline-block uppercase neo-shadow">&larr; Back home</a>
+        </nav>
+
+        <section class="grid md:grid-cols-2 gap-12">
+            <div class="bg-white neo-border p-8 neo-shadow">
+                <div class="bg-black w-full aspect-square neo-border mb-8"></div>
+                <h1 class="text-5xl font-black mb-4">John Doe</h1>
+                <p class="text-xl font-bold uppercase border-b-4 border-black pb-4 mb-4">Software Architect</p>
+                <p class="font-bold">Building the future of the web, one brutal pixel at a time.</p>
+            </div>
+
+            <div class="space-y-12">
+                <div class="bg-[#FFE66D] neo-border p-8 neo-shadow">
+                    <h2 class="text-3xl font-black mb-6">Expertise</h2>
+                    <ul class="space-y-4 font-black uppercase text-lg">
+                        <li class="flex items-center gap-3"><span class="w-4 h-4 bg-black"></span> Distributed Systems</li>
+                        <li class="flex items-center gap-3"><span class="w-4 h-4 bg-black"></span> Systems Programming</li>
+                        <li class="flex items-center gap-3"><span class="w-4 h-4 bg-black"></span> Infrastructure</li>
+                        <li class="flex items-center gap-3"><span class="w-4 h-4 bg-black"></span> UI Brutalism</li>
+                    </ul>
+                </div>
+
+                <div class="bg-[#FF6B6B] neo-border p-8 neo-shadow">
+                    <h2 class="text-3xl font-black mb-6">Connect</h2>
+                    <div class="grid grid-cols-2 gap-4">
+                        <a href="#" class="bg-white neo-border p-4 font-black uppercase text-center neo-shadow hover:translate-y-1 hover:shadow-none transition-all">Github</a>
+                        <a href="#" class="bg-white neo-border p-4 font-black uppercase text-center neo-shadow hover:translate-y-1 hover:shadow-none transition-all">Twitter</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="mt-24 text-center">
+            <p class="font-black text-2xl uppercase tracking-tighter">&copy; 2023 John Doe / All Rights Reserved</p>
+        </footer>
+    </div>
+    <script>lucide.createIcons();</script>
+</body>
+</html>

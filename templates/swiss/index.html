@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swiss Blog - Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+        body { font-family: 'Inter', sans-serif; font-weight: 400; }
+        .swiss-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 1px; background-color: #000; border: 1px solid #000; }
+        .swiss-cell { background-color: #fff; padding: 2rem; }
+    </style>
+</head>
+<body class="bg-white text-black p-4 md:p-8">
+    <div class="swiss-grid">
+        <!-- Logo -->
+        <div class="swiss-cell col-span-12 md:col-span-4 lg:col-span-3">
+            <a href="index.html" class="text-4xl font-black tracking-tighter uppercase leading-none">JD<br>23</a>
+        </div>
+
+        <!-- Title -->
+        <div class="swiss-cell col-span-12 md:col-span-8 lg:col-span-9 bg-red-600 text-white">
+            <h1 class="text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter uppercase leading-none">Engineering<br>Logbook</h1>
+        </div>
+
+        <!-- Nav -->
+        <div class="swiss-cell col-span-12 md:col-span-3 lg:col-span-2">
+            <nav class="flex flex-col gap-4 font-black uppercase tracking-tighter text-sm">
+                <a href="index.html" class="border-b-4 border-black pb-1">Index</a>
+                <a href="about.html" class="hover:border-b-4 border-black pb-1 transition-all">About</a>
+                <a href="#" class="hover:border-b-4 border-black pb-1 transition-all">Archives</a>
+                <a href="#" class="hover:border-b-4 border-black pb-1 transition-all">Contact</a>
+            </nav>
+        </div>
+
+        <!-- Description -->
+        <div class="swiss-cell col-span-12 md:col-span-9 lg:col-span-10">
+            <p class="text-2xl md:text-4xl font-bold tracking-tighter max-w-3xl leading-tight">A systematic approach to documenting technical challenges, solutions, and architectural designs.</p>
+        </div>
+
+        <!-- Featured Post -->
+        <div class="swiss-cell col-span-12 md:col-span-8 bg-zinc-100">
+            <div class="text-xs font-black uppercase tracking-widest mb-12">01 / FEATURED</div>
+            <h2 class="text-4xl md:text-6xl font-black tracking-tighter uppercase leading-none mb-8"><a href="post.html" class="hover:text-red-600">Building Scalable Systems with Rust</a></h2>
+            <p class="text-lg font-bold mb-12 max-w-xl">Analysis of memory management paradigms and their impact on distributed system performance.</p>
+            <a href="post.html" class="inline-block bg-black text-white px-8 py-4 font-black uppercase tracking-tighter text-sm">Read Report</a>
+        </div>
+
+        <!-- Side Stats -->
+        <div class="swiss-cell col-span-12 md:col-span-4 flex flex-col justify-between">
+            <div>
+                <div class="text-[10px] font-black uppercase tracking-widest mb-4">STATS</div>
+                <div class="border-t border-black pt-4 mb-8">
+                    <p class="text-4xl font-black">42</p>
+                    <p class="text-[10px] font-black uppercase tracking-widest text-zinc-400">Total Publications</p>
+                </div>
+                <div class="border-t border-black pt-4">
+                    <p class="text-4xl font-black">2023</p>
+                    <p class="text-[10px] font-black uppercase tracking-widest text-zinc-400">Current Volume</p>
+                </div>
+            </div>
+            <div class="bg-black w-12 h-12"></div>
+        </div>
+
+        <!-- Grid of smaller posts -->
+        <div class="swiss-cell col-span-12 md:col-span-4 hover:bg-black hover:text-white transition-colors group">
+            <div class="text-[10px] font-black uppercase tracking-widest mb-12 group-hover:text-red-600">02 / SYSTEMS</div>
+            <h3 class="text-2xl font-black tracking-tighter uppercase leading-tight mb-4"><a href="post.html">The Art of Minimalist UI</a></h3>
+            <p class="text-sm font-bold opacity-60">Visual reduction as a cognitive tool.</p>
+        </div>
+
+        <div class="swiss-cell col-span-12 md:col-span-4 hover:bg-black hover:text-white transition-colors group">
+            <div class="text-[10px] font-black uppercase tracking-widest mb-12 group-hover:text-red-600">03 / SECURITY</div>
+            <h3 class="text-2xl font-black tracking-tighter uppercase leading-tight mb-4"><a href="post.html">Formal Verification</a></h3>
+            <p class="text-sm font-bold opacity-60">Mathematical certainty in code.</p>
+        </div>
+
+        <div class="swiss-cell col-span-12 md:col-span-4 hover:bg-black hover:text-white transition-colors group">
+            <div class="text-[10px] font-black uppercase tracking-widest mb-12 group-hover:text-red-600">04 / DEVOPS</div>
+            <h3 class="text-2xl font-black tracking-tighter uppercase leading-tight mb-4"><a href="post.html">Kubernetes Internals</a></h3>
+            <p class="text-sm font-bold opacity-60">Deep dive into the control plane.</p>
+        </div>
+
+        <!-- Footer -->
+        <div class="swiss-cell col-span-12 flex justify-between items-end py-12">
+            <p class="text-[10px] font-black uppercase tracking-widest">John Doe &copy; 2023</p>
+            <div class="flex gap-8 text-[10px] font-black uppercase tracking-widest">
+                <a href="#">Github</a>
+                <a href="#">X-Twitter</a>
+                <a href="#">LinkedIn</a>
+            </div>
+        </div>
+    </div>
+    <script>lucide.createIcons();</script>
+</body>
+</html>

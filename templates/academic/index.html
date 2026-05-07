@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Journal - Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap');
+        body { font-family: 'Source Serif 4', serif; }
+        h1, h2, h3, .serif-display { font-family: 'Playfair Display', serif; }
+    </style>
+</head>
+<body class="bg-[#fdfcf8] text-[#1a1a1a] leading-relaxed p-6 md:p-12">
+    <div class="max-w-4xl mx-auto border-t-4 border-b border-[#1a1a1a] py-8 px-4 md:px-0">
+        <header class="text-center mb-16">
+            <div class="text-xs uppercase tracking-widest font-semibold mb-4 border-b border-[#1a1a1a] inline-block pb-1">Volume 12, Issue 4 &bull; Autumn 2023</div>
+            <h1 class="text-5xl md:text-6xl font-bold my-6">Proceedings of John Doe</h1>
+            <nav class="flex justify-center gap-8 text-sm uppercase tracking-widest font-bold">
+                <a href="index.html" class="hover:underline underline-offset-4">Index</a>
+                <a href="index.html" class="hover:underline underline-offset-4">Archives</a>
+                <a href="about.html" class="hover:underline underline-offset-4">About the Author</a>
+            </nav>
+        </header>
+
+        <section class="grid md:grid-cols-3 gap-12 border-t border-[#1a1a1a] pt-12">
+            <div class="md:col-span-2 space-y-16">
+                <article>
+                    <div class="text-xs font-bold uppercase mb-2">Systems Architecture</div>
+                    <h2 class="text-3xl font-bold mb-4 italic leading-tight"><a href="post.html">Analysis of Scalability Bottlenecks in Modern Distributed Systems: A Rust Perspective</a></h2>
+                    <p class="text-[#4a4a4a] mb-4 text-lg">An investigation into the performance characteristics of high-concurrency environments and the mitigation of memory-related vulnerabilities through borrow-checking...</p>
+                    <div class="flex items-center gap-4 text-xs font-bold uppercase">
+                        <span>Doe, J.</span>
+                        <span class="text-[#8a8a8a]">|</span>
+                        <span>12 Pages</span>
+                        <span class="text-[#8a8a8a]">|</span>
+                        <a href="post.html" class="underline">Read Abstract</a>
+                    </div>
+                </article>
+
+                <article>
+                    <div class="text-xs font-bold uppercase mb-2">Human-Computer Interaction</div>
+                    <h2 class="text-3xl font-bold mb-4 italic leading-tight"><a href="post.html">The Semiotics of Minimalism in Interface Design: Cognitive Load and Accessibility</a></h2>
+                    <p class="text-[#4a4a4a] mb-4 text-lg">A study on how reductionist visual languages impact user cognitive processing and the resulting improvements in interface discoverability...</p>
+                    <div class="flex items-center gap-4 text-xs font-bold uppercase">
+                        <span>Doe, J.</span>
+                        <span class="text-[#8a8a8a]">|</span>
+                        <span>8 Pages</span>
+                    </div>
+                </article>
+            </div>
+
+            <aside class="md:col-span-1 space-y-12 md:border-l border-[#1a1a1a] md:pl-8">
+                <div>
+                    <h3 class="text-xl font-bold border-b border-[#1a1a1a] pb-2 mb-4">Latest Research</h3>
+                    <ul class="space-y-4 text-sm">
+                        <li><a href="#" class="hover:italic font-semibold">Post-Mortem Analysis of Q3 Critical Outage</a></li>
+                        <li><a href="#" class="hover:italic font-semibold">Comparative Study of eBPF Observability Tools</a></li>
+                        <li><a href="#" class="hover:italic font-semibold">Formal Verification of consensus protocols</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold border-b border-[#1a1a1a] pb-2 mb-4">Newsletter</h3>
+                    <p class="text-sm mb-4 italic">Receive quarterly updates on my latest publications.</p>
+                    <div class="border border-[#1a1a1a] p-1 flex">
+                        <input type="email" placeholder="Email Address" class="bg-transparent text-sm p-2 flex-grow outline-none">
+                        <button class="bg-[#1a1a1a] text-white px-4 py-2 text-xs uppercase font-bold">Join</button>
+                    </div>
+                </div>
+            </aside>
+        </section>
+
+        <footer class="mt-24 pt-12 border-t-4 border-[#1a1a1a] flex flex-col md:flex-row justify-between items-center text-xs font-bold uppercase tracking-widest gap-6">
+            <div>ISSN 1234-5678</div>
+            <div class="flex gap-8">
+                <a href="#">ORCID</a>
+                <a href="#">Google Scholar</a>
+                <a href="#">ResearchGate</a>
+            </div>
+            <div>&copy; 2023 John Doe</div>
+        </footer>
+    </div>
+    <script>lucide.createIcons();</script>
+</body>
+</html>

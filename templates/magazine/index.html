@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magazine Blog - Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;700;900&display=swap');
+        body { font-family: 'Montserrat', sans-serif; }
+        .serif { font-family: 'Libre Baskerville', serif; }
+    </style>
+</head>
+<body class="bg-zinc-100 text-zinc-900">
+    <header class="bg-white border-b-2 border-black sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center h-20">
+            <a href="index.html" class="text-3xl font-black tracking-tighter uppercase">THE_STACK</a>
+            <nav class="hidden md:flex gap-8 text-xs font-black uppercase tracking-widest">
+                <a href="index.html" class="hover:text-red-600 transition-colors">Frontpage</a>
+                <a href="index.html" class="hover:text-red-600 transition-colors">Engineering</a>
+                <a href="index.html" class="hover:text-red-600 transition-colors">Design</a>
+                <a href="about.html" class="hover:text-red-600 transition-colors">About</a>
+            </nav>
+            <div class="flex items-center gap-6">
+                <button class="font-black text-xs uppercase tracking-widest">Search</button>
+                <div class="w-10 h-10 bg-black rounded-full"></div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 py-12">
+        <!-- Featured Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8 mb-12">
+            <!-- Hero Post -->
+            <div class="lg:col-span-2 group cursor-pointer">
+                <div class="bg-zinc-300 w-full aspect-video mb-6 overflow-hidden">
+                    <div class="w-full h-full bg-zinc-400 group-hover:scale-105 transition-transform duration-500"></div>
+                </div>
+                <div class="bg-red-600 text-white px-2 py-1 text-[10px] font-black uppercase tracking-widest inline-block mb-4">Must Read</div>
+                <h2 class="text-4xl font-black leading-tight mb-4 group-hover:underline underline-offset-8 decoration-4"><a href="post.html">Rust 2024: The Road to Faster Compilation</a></h2>
+                <p class="serif text-lg text-zinc-600 leading-relaxed mb-6">A deep dive into the latest compiler optimizations and what they mean for large-scale development.</p>
+                <div class="flex items-center gap-4 text-xs font-black uppercase">
+                    <span>By John Doe</span>
+                    <span class="w-1 h-1 bg-zinc-300"></span>
+                    <span class="text-zinc-400">Oct 24, 2023</span>
+                </div>
+            </div>
+
+            <!-- Sidebar Posts -->
+            <div class="lg:col-span-2 space-y-12">
+                <div class="flex gap-6 group cursor-pointer">
+                    <div class="w-32 h-32 shrink-0 bg-zinc-300 overflow-hidden">
+                        <div class="w-full h-full bg-zinc-400 group-hover:scale-110 transition-transform duration-500"></div>
+                    </div>
+                    <div>
+                        <div class="text-[10px] font-black uppercase tracking-widest text-red-600 mb-2">Systems</div>
+                        <h3 class="text-xl font-black mb-2 leading-tight group-hover:text-red-600 transition-colors"><a href="post.html">Understanding the Borrow Checker</a></h3>
+                        <p class="serif text-sm text-zinc-500 line-clamp-2">How Rust's memory model prevents common bugs in distributed systems.</p>
+                    </div>
+                </div>
+                <div class="flex gap-6 group cursor-pointer">
+                    <div class="w-32 h-32 shrink-0 bg-zinc-300 overflow-hidden">
+                        <div class="w-full h-full bg-zinc-400 group-hover:scale-110 transition-transform duration-500"></div>
+                    </div>
+                    <div>
+                        <div class="text-[10px] font-black uppercase tracking-widest text-red-600 mb-2">Design</div>
+                        <h3 class="text-xl font-black mb-2 leading-tight group-hover:text-red-600 transition-colors"><a href="post.html">Modern Typography in Technical Writing</a></h3>
+                        <p class="serif text-sm text-zinc-500 line-clamp-2">The importance of readability in long-form technical documentation.</p>
+                    </div>
+                </div>
+                <div class="flex gap-6 group cursor-pointer">
+                    <div class="w-32 h-32 shrink-0 bg-zinc-300 overflow-hidden">
+                        <div class="w-full h-full bg-zinc-400 group-hover:scale-110 transition-transform duration-500"></div>
+                    </div>
+                    <div>
+                        <div class="text-[10px] font-black uppercase tracking-widest text-red-600 mb-2">DevOps</div>
+                        <h3 class="text-xl font-black mb-2 leading-tight group-hover:text-red-600 transition-colors"><a href="post.html">Optimizing Docker Layers</a></h3>
+                        <p class="serif text-sm text-zinc-500 line-clamp-2">Techniques for reducing build times and image sizes in CI/CD.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="border-y-2 border-black py-4 mb-12 flex justify-between items-center overflow-x-auto gap-12 text-xs font-black uppercase tracking-tighter whitespace-nowrap">
+            <span>Trending Tags:</span>
+            <a href="#" class="hover:text-red-600">#KUBERNETES</a>
+            <a href="#" class="hover:text-red-600">#WEBASSEMBLY</a>
+            <a href="#" class="hover:text-red-600">#DISTRIBUTED_SYSTEMS</a>
+            <a href="#" class="hover:text-red-600">#PROMETHEUS</a>
+            <a href="#" class="hover:text-red-600">#FRONTEND_PERFORMANCE</a>
+            <a href="#" class="hover:text-red-600">#RECURSION</a>
+        </div>
+
+        <!-- Latest Section -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+            <article class="group">
+                <div class="bg-zinc-300 w-full aspect-square mb-6"></div>
+                <h4 class="text-2xl font-black mb-4"><a href="post.html">Post-Mortem: The Day the Servers Stood Still</a></h4>
+                <p class="serif text-zinc-600 mb-6">Lessons learned from a critical infrastructure failure that affected millions.</p>
+                <div class="text-xs font-black uppercase tracking-widest text-zinc-400">Sep 28, 2023</div>
+            </article>
+            <article class="group">
+                <div class="bg-zinc-300 w-full aspect-square mb-6"></div>
+                <h4 class="text-2xl font-black mb-4"><a href="post.html">Building a Custom eBPF Observability Tool</a></h4>
+                <p class="serif text-zinc-600 mb-6">Gaining deep insights into kernel operations with custom BPF programs.</p>
+                <div class="text-xs font-black uppercase tracking-widest text-zinc-400">Sep 15, 2023</div>
+            </article>
+            <article class="group">
+                <div class="bg-zinc-300 w-full aspect-square mb-6"></div>
+                <h4 class="text-2xl font-black mb-4"><a href="post.html">Formal Verification of Smart Contracts</a></h4>
+                <p class="serif text-zinc-600 mb-6">Ensuring the correctness of decentralized financial protocols through math.</p>
+                <div class="text-xs font-black uppercase tracking-widest text-zinc-400">Aug 30, 2023</div>
+            </article>
+        </div>
+    </main>
+
+    <footer class="bg-black text-white py-20 mt-20">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div>
+                <h5 class="text-3xl font-black tracking-tighter uppercase mb-8">THE_STACK</h5>
+                <p class="text-zinc-500 serif leading-relaxed">A personal technical publication by John Doe, documenting the frontier of software engineering and systems design.</p>
+            </div>
+            <div class="flex flex-col gap-4 text-sm font-black uppercase tracking-widest">
+                <a href="#" class="hover:text-red-600 transition-colors">Archive</a>
+                <a href="#" class="hover:text-red-600 transition-colors">About</a>
+                <a href="#" class="hover:text-red-600 transition-colors">Contact</a>
+                <a href="#" class="hover:text-red-600 transition-colors">RSS Feed</a>
+            </div>
+            <div>
+                <h5 class="text-xs font-black uppercase tracking-widest mb-8">Newsletter</h5>
+                <div class="flex border-b border-zinc-700 pb-2">
+                    <input type="email" placeholder="Your Email" class="bg-transparent text-white outline-none flex-grow text-xs uppercase font-black">
+                    <button class="text-xs font-black uppercase tracking-widest hover:text-red-600">Join</button>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 mt-20 pt-8 border-t border-zinc-900 text-[10px] font-black uppercase tracking-widest text-zinc-600 flex justify-between">
+            <p>&copy; 2023 John Doe / THE_STACK</p>
+            <div class="flex gap-6">
+                <a href="#">Github</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+    </footer>
+    <script>lucide.createIcons();</script>
+</body>
+</html>

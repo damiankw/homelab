@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post - Neo-Brutalist Blog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;700;900&display=swap');
+        body { font-family: 'Archivo', sans-serif; }
+        h1, h2, h3 { font-family: 'Archivo Black', sans-serif; text-transform: uppercase; }
+        .neo-shadow { box-shadow: 8px 8px 0px 0px #000; }
+        .neo-border { border: 4px solid #000; }
+    </style>
+</head>
+<body class="bg-[#FFE66D] text-black p-6 md:p-12">
+    <div class="max-w-4xl mx-auto">
+        <nav class="mb-16">
+            <a href="index.html" class="bg-black text-white neo-border px-6 py-3 font-bold inline-block uppercase neo-shadow">&larr; Back home</a>
+        </nav>
+
+        <article class="bg-white neo-border p-8 md:p-16 neo-shadow">
+            <header class="mb-12 border-b-4 border-black pb-12">
+                <div class="bg-[#FF6B6B] neo-border px-4 py-2 font-black inline-block uppercase mb-6">System Security</div>
+                <h1 class="text-4xl md:text-6xl font-black leading-none mb-6">Rust vs C++: The Memory Safety Battle</h1>
+                <div class="flex items-center gap-4 font-bold uppercase text-sm">
+                    <span>Oct 24, 2023</span>
+                    <span class="w-2 h-2 bg-black"></span>
+                    <span>12 Min Read</span>
+                </div>
+            </header>
+
+            <div class="space-y-8 text-lg font-medium leading-tight">
+                <p class="text-2xl font-black italic">Memory management is the biggest pain point in systems programming. Period.</p>
+
+                <p>For decades, C++ has been the industry standard. It gives you total control, but that control comes at a massive cost. One wrong pointer, one double-free, and your entire application crashes — or worse, it becomes a security vulnerability.</p>
+
+                <h2 class="text-3xl font-black bg-[#4ECDC4] neo-border p-4 inline-block mt-8 mb-4">The Borrow Checker</h2>
+                <p>Rust introduced a new paradigm. Instead of trusting the programmer to manage memory, the compiler enforces ownership rules. If you try to use a variable after its owner has gone out of scope, the code simply won't compile.</p>
+
+                <div class="bg-black text-[#4ECDC4] p-8 neo-border overflow-x-auto my-8">
+                    <pre class="font-bold">fn main() {
+  let s1 = String::from("hello");
+  let s2 = s1;
+  // println!("{}", s1);
+  // ^^^ Error: value borrowed here after move
+}</pre>
+                </div>
+
+                <p>This is "Fearless Concurrency". It means you can write multi-threaded code without worrying about data races, because the compiler won't let you write them in the first place.</p>
+            </div>
+        </article>
+
+        <footer class="mt-24 bg-black text-white p-12 neo-border neo-shadow">
+            <h3 class="text-3xl font-black mb-6">Newsletter</h3>
+            <p class="text-xl font-bold mb-8">Subscribe for more brutal technical takes.</p>
+            <div class="flex flex-col md:flex-row gap-4">
+                <input type="email" placeholder="YOUR@EMAIL.COM" class="bg-white text-black p-4 neo-border flex-grow font-black uppercase">
+                <button class="bg-[#FF6B6B] text-black p-4 neo-border font-black uppercase hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all">Sign Up</button>
+            </div>
+        </footer>
+    </div>
+    <script>lucide.createIcons();</script>
+</body>
+</html>

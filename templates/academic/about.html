@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Academic Journal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap');
+        body { font-family: 'Source Serif 4', serif; }
+        h1, h2, h3, .serif-display { font-family: 'Playfair Display', serif; }
+    </style>
+</head>
+<body class="bg-[#fdfcf8] text-[#1a1a1a] leading-relaxed p-6 md:p-12">
+    <div class="max-w-4xl mx-auto py-12 px-4 md:px-0">
+        <nav class="mb-16 border-b-2 border-[#1a1a1a] pb-4">
+            <a href="index.html" class="text-xs font-bold uppercase tracking-widest hover:italic">&larr; Back to Index</a>
+        </nav>
+
+        <section class="grid md:grid-cols-3 gap-16">
+            <div class="md:col-span-1">
+                <div class="bg-[#1a1a1a] w-full aspect-square mb-8"></div> <!-- Placeholder for photo -->
+                <h2 class="text-2xl font-bold italic mb-4">John Doe</h2>
+                <p class="text-sm font-bold uppercase tracking-tighter mb-8">Principal Systems Researcher</p>
+                <div class="space-y-4 text-sm font-bold uppercase tracking-widest">
+                    <a href="#" class="block hover:underline">Curriculum Vitae</a>
+                    <a href="#" class="block hover:underline">List of Publications</a>
+                    <a href="#" class="block hover:underline">Contact Information</a>
+                </div>
+            </div>
+
+            <div class="md:col-span-2 space-y-12">
+                <div>
+                    <h3 class="text-2xl font-bold border-b border-[#1a1a1a] pb-2 mb-6 uppercase tracking-tight">Biography</h3>
+                    <p class="mb-6">John Doe is a software engineer and researcher focused on the intersection of formal methods and high-performance computing. He currently serves as a Senior Systems Architect at Acme Corp, where he oversees the development of cloud infrastructure.</p>
+                    <p>His work has been published in numerous industry journals and he is a frequent speaker at systems programming conferences worldwide. His research interests include distributed consensus, lock-free data structures, and the application of linear types to memory management.</p>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-bold border-b border-[#1a1a1a] pb-2 mb-6 uppercase tracking-tight">Selected Work</h3>
+                    <ul class="space-y-6">
+                        <li>
+                            <div class="text-xs font-bold text-[#8a8a8a] mb-1">2023</div>
+                            <div class="font-bold italic">Building Scalable Systems with Rust</div>
+                            <div class="text-sm">Proceedings of the Systems Engineering Symposium.</div>
+                        </li>
+                        <li>
+                            <div class="text-xs font-bold text-[#8a8a8a] mb-1">2021</div>
+                            <div class="font-bold italic">The Art of Minimalist UI</div>
+                            <div class="text-sm">Human-Computer Interaction Quarterly.</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <footer class="mt-24 pt-12 border-t-4 border-[#1a1a1a] text-xs font-bold uppercase tracking-widest">
+            &copy; 2023 John Doe
+        </footer>
+    </div>
+    <script>lucide.createIcons();</script>
+</body>
+</html>

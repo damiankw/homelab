@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neo-Brutalist Blog - Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;700;900&display=swap');
+        body { font-family: 'Archivo', sans-serif; }
+        h1, h2, h3 { font-family: 'Archivo Black', sans-serif; text-transform: uppercase; }
+        .neo-shadow { box-shadow: 8px 8px 0px 0px #000; }
+        .neo-shadow-sm { box-shadow: 4px 4px 0px 0px #000; }
+        .neo-shadow-hover:hover { box-shadow: 12px 12px 0px 0px #000; transform: translate(-4px, -4px); }
+        .neo-border { border: 4px solid #000; }
+    </style>
+</head>
+<body class="bg-[#FF6B6B] text-black p-6 md:p-12">
+    <div class="max-w-6xl mx-auto">
+        <nav class="flex flex-wrap justify-between items-center gap-6 mb-16">
+            <a href="index.html" class="bg-[#4ECDC4] neo-border px-6 py-3 text-2xl font-black neo-shadow uppercase tracking-tighter">JD_BLOG</a>
+            <div class="flex gap-4">
+                <a href="index.html" class="bg-white neo-border px-6 py-3 font-bold neo-shadow-sm hover:translate-y-1 hover:shadow-none transition-all uppercase">Archive</a>
+                <a href="about.html" class="bg-[#FFE66D] neo-border px-6 py-3 font-bold neo-shadow-sm hover:translate-y-1 hover:shadow-none transition-all uppercase">About Me</a>
+            </div>
+        </nav>
+
+        <header class="mb-20">
+            <div class="bg-white neo-border p-8 md:p-16 neo-shadow inline-block">
+                <h1 class="text-5xl md:text-8xl leading-none mb-6">Technical<br>Explorations.</h1>
+                <p class="text-xl md:text-2xl font-bold border-t-4 border-black pt-6">No fluff. No emojis. Just hard engineering.</p>
+            </div>
+        </header>
+
+        <section class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <article class="bg-[#FFE66D] neo-border p-8 neo-shadow-hover transition-all flex flex-col">
+                <div class="bg-black text-white px-3 py-1 text-xs font-bold self-start mb-6 uppercase">Systems</div>
+                <h2 class="text-2xl font-black mb-6 leading-tight flex-grow"><a href="post.html">Rust vs C++: The Memory Safety Battle</a></h2>
+                <div class="mt-auto pt-6 border-t-2 border-black flex justify-between items-center">
+                    <span class="font-black text-sm">OCT 24, 2023</span>
+                    <a href="post.html" class="bg-black text-white p-2"><i data-lucide="arrow-right"></i></a>
+                </div>
+            </article>
+
+            <article class="bg-[#4ECDC4] neo-border p-8 neo-shadow-hover transition-all flex flex-col">
+                <div class="bg-black text-white px-3 py-1 text-xs font-bold self-start mb-6 uppercase">Design</div>
+                <h2 class="text-2xl font-black mb-6 leading-tight flex-grow"><a href="post.html">Brutalism in Interface Design</a></h2>
+                <div class="mt-auto pt-6 border-t-2 border-black flex justify-between items-center">
+                    <span class="font-black text-sm">OCT 12, 2023</span>
+                    <a href="post.html" class="bg-black text-white p-2"><i data-lucide="arrow-right"></i></a>
+                </div>
+            </article>
+
+            <article class="bg-white neo-border p-8 neo-shadow-hover transition-all flex flex-col">
+                <div class="bg-black text-white px-3 py-1 text-xs font-bold self-start mb-6 uppercase">DevOps</div>
+                <h2 class="text-2xl font-black mb-6 leading-tight flex-grow"><a href="post.html">Kubernetes without the overhead</a></h2>
+                <div class="mt-auto pt-6 border-t-2 border-black flex justify-between items-center">
+                    <span class="font-black text-sm">SEP 28, 2023</span>
+                    <a href="post.html" class="bg-black text-white p-2"><i data-lucide="arrow-right"></i></a>
+                </div>
+            </article>
+        </section>
+
+        <footer class="mt-32 pt-12 border-t-4 border-black flex flex-wrap justify-between items-center gap-8">
+            <p class="font-black text-xl uppercase">John Doe &copy; 2023</p>
+            <div class="flex gap-4">
+                <a href="#" class="bg-black text-white p-4 neo-shadow-sm"><i data-lucide="github"></i></a>
+                <a href="#" class="bg-black text-white p-4 neo-shadow-sm"><i data-lucide="twitter"></i></a>
+                <a href="#" class="bg-black text-white p-4 neo-shadow-sm"><i data-lucide="mail"></i></a>
+            </div>
+        </footer>
+    </div>
+    <script>lucide.createIcons();</script>
+</body>
+</html>

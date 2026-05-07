@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Focus Blog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Charter:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .serif { font-family: 'Charter', 'Georgia', serif; }
+        .focus-link:hover { opacity: 0.6; }
+    </style>
+</head>
+<body class="bg-[#fafafa] text-[#1a1a1a] selection:bg-black selection:text-white">
+    <nav class="max-w-2xl mx-auto px-6 py-20 flex justify-between items-center">
+        <a href="index.html" class="font-bold tracking-tight text-lg focus-link">JD</a>
+        <a href="index.html" class="text-sm font-medium focus-link">Index</a>
+    </nav>
+
+    <main class="max-w-2xl mx-auto px-6 pb-40">
+        <section class="space-y-12">
+            <h1 class="serif text-5xl font-bold">About John Doe</h1>
+
+            <div class="serif text-xl leading-relaxed space-y-8 text-[#333]">
+                <p>I am a software engineer focused on building robust, high-performance systems. My work is driven by a desire for simplicity, clarity, and technical excellence.</p>
+
+                <p>Currently, I am a Systems Architect at Acme Corp, where I design and implement distributed infrastructure that handles millions of daily active users.</p>
+
+                <p>This blog is a place for me to share my thoughts and research on various technical topics, ranging from compiler design to distributed consensus protocols.</p>
+            </div>
+
+            <div class="pt-12">
+                <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-[#999] mb-6">Coordinates</h2>
+                <div class="grid grid-cols-2 gap-8 text-sm font-medium">
+                    <div>
+                        <p class="text-[#999] mb-1">Location</p>
+                        <p>San Francisco, CA</p>
+                    </div>
+                    <div>
+                        <p class="text-[#999] mb-1">Availability</p>
+                        <p>Open for collaboration</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-12">
+                <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-[#999] mb-6">Links</h2>
+                <div class="flex gap-8 text-sm font-medium">
+                    <a href="#" class="focus-link">GitHub</a>
+                    <a href="#" class="focus-link">Twitter</a>
+                    <a href="#" class="focus-link">LinkedIn</a>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
